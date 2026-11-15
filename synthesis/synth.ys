@@ -1,0 +1,23 @@
+# ============================================================================
+# Yosys synthesis script for counter8
+# Technology: SKY130 (sky130_fd_sc_hd)
+# ============================================================================
+
+# Read design
+read_verilog rtl/counter.v
+
+# Synthesise
+synth -top counter
+
+# Technology mapping with SKY130 standard cells
+dfflibmap -liberty /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Clean up
+clean
+
+# Statistics
+stat -liberty /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Write netlist
+write_verilog synthesis/counter_synth.v

@@ -1,0 +1,1005 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib.gz', decompressing using zlib.
+
+1. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib.gz
+Imported 428 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vccd_lvc_clamped_pad_tt_025C_1v80_3v30_3v30.lib.gz', decompressing using zlib.
+
+2. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vccd_lvc_clamped_pad_tt_025C_1v80_3v30_3v30.lib.gz
+Imported 1 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vssd_lvc_clamped_pad_tt_025C_1v80_3v30.lib.gz', decompressing using zlib.
+
+3. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vssd_lvc_clamped_pad_tt_025C_1v80_3v30.lib.gz
+Imported 1 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vddio_hvc_clamped_pad_tt_025C_1v80_3v30_3v30.lib.gz', decompressing using zlib.
+
+4. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vddio_hvc_clamped_pad_tt_025C_1v80_3v30_3v30.lib.gz
+Imported 1 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vssio_hvc_clamped_pad_tt_025C_1v80_3v30_3v30.lib.gz', decompressing using zlib.
+
+5. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__vssio_hvc_clamped_pad_tt_025C_1v80_3v30_3v30.lib.gz
+Imported 1 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__gpiov2_pad_tt_tt_025C_1v80_3v30.lib.gz', decompressing using zlib.
+
+6. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__gpiov2_pad_tt_tt_025C_1v80_3v30.lib.gz
+Imported 1 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/slices_stubs.lib.gz', decompressing using zlib.
+
+7. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/slices_stubs.lib.gz
+Imported 2 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__analog_stubs.lib.gz', decompressing using zlib.
+
+8. Executing Liberty frontend: /foss/pdks/sky130A/libs.ref/sky130_fd_io/lib/sky130_ef_io__analog_stubs.lib.gz
+Imported 5 cell types from liberty file.
+[INFO] Using SDC file '/foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+9. Executing Verilog-2005 frontend: /foss/designs/counter8/rtl/counter.v
+Parsing SystemVerilog input from `/foss/designs/counter8/rtl/counter.v' to AST representation.
+Storing AST representation for module `$abstract\counter'.
+Successfully finished Verilog frontend.
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+
+11. Executing AST frontend in derive mode using pre-parsed AST for module `\counter'.
+Generating RTLIL representation for module `\counter'.
+
+11.1. Analyzing design hierarchy..
+Top module:  \counter
+
+11.2. Analyzing design hierarchy..
+Top module:  \counter
+Removing unused module `$abstract\counter'.
+Removed 1 unused modules.
+Renaming module counter to counter.
+
+12. Executing ATTRMAP pass (move or copy attributes).
+
+13. Executing TRIBUF pass.
+
+14. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1. Analyzing design hierarchy..
+Top module:  \counter
+
+14.2. Analyzing design hierarchy..
+Top module:  \counter
+Removed 0 unused modules.
+
+15. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+16. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/foss/designs/counter8/rtl/counter.v:23$1 in module counter.
+Removed a total of 0 dead cases.
+
+17. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+18. Executing PROC_INIT pass (extract init attributes).
+
+19. Executing PROC_ARST pass (detect async resets in processes).
+
+20. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+21. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\counter.$proc$/foss/designs/counter8/rtl/counter.v:23$1'.
+     1/1: $0\count[7:0]
+
+22. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+23. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\counter.\count' using process `\counter.$proc$/foss/designs/counter8/rtl/counter.v:23$1'.
+  created $dff cell `$procdff$8' with positive edge clock.
+
+24. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+25. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\counter.$proc$/foss/designs/counter8/rtl/counter.v:23$1'.
+Removing empty process `counter.$proc$/foss/designs/counter8/rtl/counter.v:23$1'.
+Cleaned up 2 empty switches.
+
+26. Executing CHECK pass (checking for obvious problems).
+Checking module counter...
+Found and reported 0 problems.
+
+27. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+28. Executing FLATTEN pass (flatten design).
+
+29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+31. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+32. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 4 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+33. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+34. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+35. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 4 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+36. Executing OPT_DFF pass (perform DFF optimizations).
+
+37. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+38. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+39. Executing FSM pass (extract and optimize FSM).
+
+39.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+39.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+39.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+39.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+39.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+39.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+39.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+40. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+41. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 4 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+42. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+43. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+44. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 4 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+45. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$8 ($dff) from module counter (D = $procmux$3_Y, Q = \count, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$9 ($sdff) from module counter (D = $add$/foss/designs/counter8/rtl/counter.v:27$2_Y, Q = \count).
+
+46. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+47. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+48. Rerunning OPT passes. (Maybe there is more to do…)
+
+49. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+50. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+51. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 2 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+52. Executing OPT_DFF pass (perform DFF optimizations).
+
+53. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+54. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+55. Executing WREDUCE pass (reducing word size of cells).
+Removed top 7 bits (of 8) from port B of cell counter.$add$/foss/designs/counter8/rtl/counter.v:27$2 ($add).
+
+56. Executing PEEPOPT pass (run peephole optimizers).
+
+57. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+58. Executing BOOTH pass (map to Booth multipliers).
+Mapped 0 multipliers.
+
+59. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module counter:
+  creating $macc model for $add$/foss/designs/counter8/rtl/counter.v:27$2 ($add).
+  creating $alu model for $macc $add$/foss/designs/counter8/rtl/counter.v:27$2.
+  creating $alu cell for $add$/foss/designs/counter8/rtl/counter.v:27$2: $auto$alumacc.cc:578:replace_alu$11
+  created 1 $alu and 0 $macc cells.
+
+60. Executing ARITH_TREE pass.
+
+61. Executing SHARE pass (SAT-based resource sharing).
+
+62. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+63. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 2 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+64. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+65. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+66. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 2 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+67. Executing OPT_DFF pass (perform DFF optimizations).
+
+68. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+69. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+70. Executing MEMORY pass.
+
+70.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+70.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+70.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+70.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+70.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+70.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+70.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+70.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+70.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+70.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+71. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+72. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+73. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 2 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+74. Executing OPT_DFF pass (perform DFF optimizations).
+
+75. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+76. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+77. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+78. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 2 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+79. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+80. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+81. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 2 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+82. Executing OPT_SHARE pass.
+
+83. Executing OPT_DFF pass (perform DFF optimizations).
+
+84. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+85. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+86. Executing TECHMAP pass (map to technology primitives).
+
+86.1. Executing Verilog-2005 frontend: /foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+86.2. Continuing TECHMAP pass.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~239 debug messages>
+
+87. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+<suppressed ~67 debug messages>
+
+88. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 35 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Computing hashes of 34 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+89. Executing OPT_DFF pass (perform DFF optimizations).
+
+90. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 10 unused cells and 58 unused wires.
+<suppressed ~11 debug messages>
+
+91. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+92. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 24 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+93. Executing OPT_DFF pass (perform DFF optimizations).
+
+94. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+95. Executing ABC pass (technology mapping using ABC).
+
+95.1. Summary of detected clock domains:
+  24 cells in clk=\clk, en=\en, arst={ }, srst=\rst
+
+95.2. Extracting gate netlist of module `\counter' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by \en, synchronously reset by \rst
+
+95.2.1. Executed ABC.
+Extracted 16 gates and 24 wires to a netlist network with 8 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 15 2026 14:24:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+95.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        5
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        6
+ABC RESULTS:        internal signals:        8
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+96. Executing OPT pass (performing simple optimizations).
+
+96.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+96.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 22 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+96.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+96.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 19 unused wires.
+<suppressed ~1 debug messages>
+
+96.5. Finished fast OPT passes.
+
+97. Executing HIERARCHY pass (managing design hierarchy).
+
+97.1. Analyzing design hierarchy..
+Top module:  \counter
+
+97.2. Analyzing design hierarchy..
+Top module:  \counter
+Removed 0 unused modules.
+
+98. Executing CHECK pass (checking for obvious problems).
+Checking module counter...
+Found and reported 0 problems.
+
+99. Printing statistics.
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       33 wire bits
+        4 public wires
+       11 public wire bits
+        4 ports
+       11 port bits
+       22 cells
+        5   $_AND_
+        1   $_NAND_
+        1   $_NOT_
+        8   $_SDFFE_PP0P_
+        1   $_XNOR_
+        6   $_XOR_
+
+100. Executing OPT pass (performing simple optimizations).
+
+100.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+100.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 22 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+100.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+100.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+100.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Computing hashes of 22 cells of `\counter'.
+Finding duplicate cells in `\counter'.
+Removed a total of 0 cells.
+
+100.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+100.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+100.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+100.9. Finished fast OPT passes. (There is nothing left to do.)
+
+101. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/4dfcf9f3cbab4fd3b2de3497cdad5125.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/72270ec8398a42828fb9328c9e1338be.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/8ef1891521c443018f8dd5ebcf48137b.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/18e9abd9d83845739991dd6152c44c9f.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/ca592abefe56459286a8e2b710ca2446.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/0bdc597c90564368b516e142cb130900.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/3baa0c286fa14804881afd36ac09c622.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/e9682da39501479a8d2cd53591aa2e25.lib ",
+   "modules": {
+      "\\counter": {
+         "num_wires":         12,
+         "num_wire_bits":     33,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 5,
+            "$_NAND_": 1,
+            "$_NOT_": 1,
+            "$_SDFFE_PP0P_": 8,
+            "$_XNOR_": 1,
+            "$_XOR_": 6
+         }
+      }
+   },
+      "design": {
+         "num_wires":         12,
+         "num_wire_bits":     33,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 5,
+            "$_NAND_": 1,
+            "$_NOT_": 1,
+            "$_SDFFE_PP0P_": 8,
+            "$_XNOR_": 1,
+            "$_XOR_": 6
+         }
+      }
+}
+
+102. Printing statistics.
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       33 wire bits
+        4 public wires
+       11 public wire bits
+        4 ports
+       11 port bits
+       22 cells
+        5   $_AND_
+        1   $_NAND_
+        1   $_NOT_
+        8   $_SDFFE_PP0P_
+        1   $_XNOR_
+        6   $_XOR_
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_SDFFE_PP0P_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/foss/pdks/sky130A/libs.tech/librelane/sky130_fd_sc_hd/tribuff_map.v'…
+
+103. Executing TECHMAP pass (map to technology primitives).
+
+103.1. Executing Verilog-2005 frontend: /foss/pdks/sky130A/libs.tech/librelane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/foss/pdks/sky130A/libs.tech/librelane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `$_TBUF_'.
+Successfully finished Verilog frontend.
+
+103.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+104. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/foss/pdks/sky130A/libs.tech/librelane/sky130_fd_sc_hd/latch_map.v'…
+
+105. Executing TECHMAP pass (map to technology primitives).
+
+105.1. Executing Verilog-2005 frontend: /foss/pdks/sky130A/libs.tech/librelane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/foss/pdks/sky130A/libs.tech/librelane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+105.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+106. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+107. Executing DFFLIBMAP pass (mapping DFF/DLATCH cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_1 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__edfxtp_1 (noninv, pins=4, area=30.03) is a direct match for cell type $_DFFE_PP_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  cell sky130_fd_sc_hd__dlxtn_1 (noninv, pins=3, area=15.01) is a direct match for cell type $_DLATCH_N_.
+  cell sky130_fd_sc_hd__dlxtp_1 (noninv, pins=3, area=15.01) is a direct match for cell type $_DLATCH_P_.
+  cell sky130_fd_sc_hd__dlrtn_1 (noninv, pins=4, area=17.52) is a direct match for cell type $_DLATCH_NN0_.
+  cell sky130_fd_sc_hd__dlrtp_1 (noninv, pins=4, area=16.27) is a direct match for cell type $_DLATCH_PN0_.
+  final dff/dlatch cell mappings:
+    unmapped dff/dlatch cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DFF_NN1_
+    unmapped dff/dlatch cell: $_DFF_NP0_
+    unmapped dff/dlatch cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_1 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff/dlatch cell: $_DFF_PP0_
+    unmapped dff/dlatch cell: $_DFF_PP1_
+    unmapped dff/dlatch cell: $_DFFE_NN_
+    unmapped dff/dlatch cell: $_DFFE_NP_
+    unmapped dff/dlatch cell: $_DFFE_PN_
+    \sky130_fd_sc_hd__edfxtp_1 _DFFE_PP_ (.CLK( C), .D( D), .DE( E), .Q( Q));
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff/dlatch cell: $_DFFSR_NNP_
+    unmapped dff/dlatch cell: $_DFFSR_NPN_
+    unmapped dff/dlatch cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff/dlatch cell: $_DFFSR_PNP_
+    unmapped dff/dlatch cell: $_DFFSR_PPN_
+    unmapped dff/dlatch cell: $_DFFSR_PPP_
+    \sky130_fd_sc_hd__dlxtn_1 _DLATCH_N_ (.D( D), .GATE_N( E), .Q( Q));
+    \sky130_fd_sc_hd__dlxtp_1 _DLATCH_P_ (.D( D), .GATE( E), .Q( Q));
+    \sky130_fd_sc_hd__dlrtn_1 _DLATCH_NN0_ (.D( D), .GATE_N( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_NN1_
+    unmapped dff/dlatch cell: $_DLATCH_NP0_
+    unmapped dff/dlatch cell: $_DLATCH_NP1_
+    \sky130_fd_sc_hd__dlrtp_1 _DLATCH_PN0_ (.D( D), .GATE( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_PN1_
+    unmapped dff/dlatch cell: $_DLATCH_PP0_
+    unmapped dff/dlatch cell: $_DLATCH_PP1_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPP_
+
+107.1. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+Mapping DFF/DLATCH cells in module `\counter':
+  mapped 8 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_1 cells.
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/4dfcf9f3cbab4fd3b2de3497cdad5125.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/72270ec8398a42828fb9328c9e1338be.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/8ef1891521c443018f8dd5ebcf48137b.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/18e9abd9d83845739991dd6152c44c9f.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/ca592abefe56459286a8e2b710ca2446.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/0bdc597c90564368b516e142cb130900.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/3baa0c286fa14804881afd36ac09c622.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/e9682da39501479a8d2cd53591aa2e25.lib ",
+   "modules": {
+      "\\counter": {
+         "num_wires":         28,
+         "num_wire_bits":     49,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         38,
+         "num_submodules":       0,
+         "area":              160.153600,
+         "sequential_area":    160.153600,
+         "num_cells_by_type": {
+            "$_AND_": 5,
+            "$_MUX_": 16,
+            "$_NAND_": 1,
+            "$_NOT_": 1,
+            "$_XNOR_": 1,
+            "$_XOR_": 6,
+            "sky130_fd_sc_hd__dfxtp_1": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         28,
+         "num_wire_bits":     49,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         38,
+         "num_submodules":       0,
+         "area":              160.153600,
+         "sequential_area":    160.153600,
+         "num_cells_by_type": {
+            "$_AND_": 5,
+            "$_MUX_": 16,
+            "$_NAND_": 1,
+            "$_NOT_": 1,
+            "$_XNOR_": 1,
+            "$_XOR_": 6,
+            "sky130_fd_sc_hd__dfxtp_1": 8
+         }
+      }
+}
+
+108. Printing statistics.
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       28        - wires
+       49        - wire bits
+        4        - public wires
+       11        - public wire bits
+        4        - ports
+       11        - port bits
+       38  160.154 cells
+        5        -   $_AND_
+       16        -   $_MUX_
+        1        -   $_NAND_
+        1        -   $_NOT_
+        1        -   $_XNOR_
+        6        -   $_XOR_
+        8  160.154   sky130_fd_sc_hd__dfxtp_1
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+   Chip area for module '\counter': 160.153600
+     of which used for sequential elements: 160.153600 (100.00%)
+
+[INFO] Using generated ABC strategy script '/foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/06-yosys-synthesis/AREA_0.abc'…
+
+109. Executing ABC pass (technology mapping using ABC).
+
+109.1. Summary of detected clock domains:
+  38 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+109.2. Extracting gate netlist of module `\counter' to `/tmp/yosys-abc-e3Ipti/input.blif'..
+No matching clock domain found. Not extracting any FF cells.
+
+109.2.1. Executed ABC.
+Extracted 30 gates and 41 wires to a netlist network with 10 inputs and 8 outputs.
+Running ABC script: /tmp/yosys-abc-e3Ipti/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 15 2026 14:24:00)
+ABC: abc 01> empty
+ABC: abc 01> source /tmp/yosys-abc-e3Ipti/abc.script
+ABC: + read_blif /tmp/yosys-abc-e3Ipti/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache-1000/yosys_merged_fce22ef9.scl 
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =     20 (  0.0 %)   Cap = 13.4 ff (  6.7 %)   Area =      120.12 ( 80.0 %)   Delay =  1371.59 ps  ( 20.0 %)               
+ABC: Path  0 --      10 : 0    4 pi                      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  10.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      20 : 4    5 sky130_fd_sc_hd__and4_1 A =   8.76  Df = 235.7  -25.4 ps  S = 131.8 ps  Cin =  1.5 ff  Cout =  11.6 ff  Cmax = 161.1 ff  G =  710  
+ABC: Path  2 --      21 : 3    6 sky130_fd_sc_hd__and3_1 A =   6.26  Df = 482.3  -41.7 ps  S = 151.8 ps  Cin =  1.5 ff  Cout =  14.1 ff  Cmax = 157.5 ff  G =  881  
+ABC: Path  3 --      23 : 3    2 sky130_fd_sc_hd__and3_1 A =   6.26  Df = 669.9  -31.3 ps  S =  71.4 ps  Cin =  1.5 ff  Cout =   5.1 ff  Cmax = 157.5 ff  G =  312  
+ABC: Path  4 --      24 : 3    1 sky130_fd_sc_hd__nor3_1 A =   5.00  Df =1371.6 -550.4 ps  S = 962.4 ps  Cin =  2.4 ff  Cout =  33.4 ff  Cmax =  52.2 ff  G = 1403  
+ABC: Start-point = pi9 (\en).  End-point = po0 ($auto$rtlil.cc:3492:MuxGate$265).
+ABC: netlist                       : i/o =   10/    8  lat =    0  nd =    20  edge =     60  area =120.09  delay = 4.00  lev = 4
+ABC: + write_blif /tmp/yosys-abc-e3Ipti/output.blif 
+ABC:                                                                                
+ABC: YOSYS_ABC_DONE 
+
+109.2.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a41oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:        1
+ABC RESULTS:        internal signals:       23
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+110. Executing SETUNDEF pass (replace undef values with defined constants).
+
+111. Executing HILOMAP pass (mapping to constant drivers).
+
+112. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+113. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 48 unused wires.
+<suppressed ~1 debug messages>
+
+114. Executing INSBUF pass (insert buffer cells for connected wires).
+
+115. Executing CHECK pass (checking for obvious problems).
+Checking module counter...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/4dfcf9f3cbab4fd3b2de3497cdad5125.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/72270ec8398a42828fb9328c9e1338be.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/8ef1891521c443018f8dd5ebcf48137b.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/18e9abd9d83845739991dd6152c44c9f.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/ca592abefe56459286a8e2b710ca2446.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/0bdc597c90564368b516e142cb130900.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/3baa0c286fa14804881afd36ac09c622.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/e9682da39501479a8d2cd53591aa2e25.lib ",
+   "modules": {
+      "\\counter": {
+         "num_wires":         24,
+         "num_wire_bits":     31,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         28,
+         "num_submodules":       0,
+         "area":              280.268800,
+         "sequential_area":    160.153600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21oi_1": 5,
+            "sky130_fd_sc_hd__a41oi_1": 1,
+            "sky130_fd_sc_hd__and3_1": 3,
+            "sky130_fd_sc_hd__and4_1": 1,
+            "sky130_fd_sc_hd__dfxtp_1": 8,
+            "sky130_fd_sc_hd__nor2_1": 2,
+            "sky130_fd_sc_hd__nor3_1": 4,
+            "sky130_fd_sc_hd__o21a_1": 3,
+            "sky130_fd_sc_hd__xnor2_1": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         24,
+         "num_wire_bits":     31,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         28,
+         "num_submodules":       0,
+         "area":              280.268800,
+         "sequential_area":    160.153600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21oi_1": 5,
+            "sky130_fd_sc_hd__a41oi_1": 1,
+            "sky130_fd_sc_hd__and3_1": 3,
+            "sky130_fd_sc_hd__and4_1": 1,
+            "sky130_fd_sc_hd__dfxtp_1": 8,
+            "sky130_fd_sc_hd__nor2_1": 2,
+            "sky130_fd_sc_hd__nor3_1": 4,
+            "sky130_fd_sc_hd__o21a_1": 3,
+            "sky130_fd_sc_hd__xnor2_1": 1
+         }
+      }
+}
+
+116. Printing statistics.
+
+=== counter ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       24        - wires
+       31        - wire bits
+        4        - public wires
+       11        - public wire bits
+        4        - ports
+       11        - port bits
+       28  280.269 cells
+        5   25.024   sky130_fd_sc_hd__a21oi_1
+        1    8.758   sky130_fd_sc_hd__a41oi_1
+        3   18.768   sky130_fd_sc_hd__and3_1
+        1    8.758   sky130_fd_sc_hd__and4_1
+        8  160.154   sky130_fd_sc_hd__dfxtp_1
+        2    7.507   sky130_fd_sc_hd__nor2_1
+        4   20.019   sky130_fd_sc_hd__nor3_1
+        3   22.522   sky130_fd_sc_hd__o21a_1
+        1    8.758   sky130_fd_sc_hd__xnor2_1
+
+   Chip area for module '\counter': 280.268800
+     of which used for sequential elements: 160.153600 (57.14%)
+
+117. Executing Verilog backend.
+Dumping module `\counter'.
+
+118. Executing JSON backend.

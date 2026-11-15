@@ -1,0 +1,7 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/b64b04e504ca4a65b8aa0819cbdd901c.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/b64b04e504ca4a65b8aa0819cbdd901c.bb.v"
+lint_off -rule UNDRIVEN -file "/foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/7b74ff3a8d6046cb9ed80c19981a3fd4.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/7b74ff3a8d6046cb9ed80c19981a3fd4.bb.v"

@@ -1,0 +1,59 @@
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/4dfcf9f3cbab4fd3b2de3497cdad5125.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/72270ec8398a42828fb9328c9e1338be.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/8ef1891521c443018f8dd5ebcf48137b.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/18e9abd9d83845739991dd6152c44c9f.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/ca592abefe56459286a8e2b710ca2446.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/0bdc597c90564368b516e142cb130900.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/3baa0c286fa14804881afd36ac09c622.lib -liberty /foss/designs/counter8/runs/RUN_2026-11-15_04-45-36/tmp/e9682da39501479a8d2cd53591aa2e25.lib ",
+   "modules": {
+      "\\counter": {
+         "num_wires":         24,
+         "num_wire_bits":     31,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         28,
+         "num_submodules":       0,
+         "area":              280.268800,
+         "sequential_area":    160.153600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21oi_1": 5,
+            "sky130_fd_sc_hd__a41oi_1": 1,
+            "sky130_fd_sc_hd__and3_1": 3,
+            "sky130_fd_sc_hd__and4_1": 1,
+            "sky130_fd_sc_hd__dfxtp_1": 8,
+            "sky130_fd_sc_hd__nor2_1": 2,
+            "sky130_fd_sc_hd__nor3_1": 4,
+            "sky130_fd_sc_hd__o21a_1": 3,
+            "sky130_fd_sc_hd__xnor2_1": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         24,
+         "num_wire_bits":     31,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 11,
+         "num_ports":         4,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         28,
+         "num_submodules":       0,
+         "area":              280.268800,
+         "sequential_area":    160.153600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21oi_1": 5,
+            "sky130_fd_sc_hd__a41oi_1": 1,
+            "sky130_fd_sc_hd__and3_1": 3,
+            "sky130_fd_sc_hd__and4_1": 1,
+            "sky130_fd_sc_hd__dfxtp_1": 8,
+            "sky130_fd_sc_hd__nor2_1": 2,
+            "sky130_fd_sc_hd__nor3_1": 4,
+            "sky130_fd_sc_hd__o21a_1": 3,
+            "sky130_fd_sc_hd__xnor2_1": 1
+         }
+      }
+}
+

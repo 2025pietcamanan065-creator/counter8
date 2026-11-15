@@ -1,0 +1,172 @@
+{
+  "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+  "modules": {
+    "counter": {
+      "attributes": {
+        "hdlname": "counter",
+        "top": "00000000000000000000000000000001",
+        "src": "/foss/designs/counter8/rtl/counter.v:16.1-31.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "count": {
+          "direction": "output",
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12 ]
+        }
+      },
+      "cells": {
+        "$add$/foss/designs/counter8/rtl/counter.v:27$2": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:27.22-27.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 13, 14, 15, 16, 17, 18, 19, 20 ]
+          }
+        },
+        "$procdff$8": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:23.5-29.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+            "Q": [ 5, 6, 7, 8, 9, 10, 11, 12 ]
+          }
+        },
+        "$procmux$3": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:26.18-26.20|/foss/designs/counter8/rtl/counter.v:26.14-27.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+            "B": [ 13, 14, 15, 16, 17, 18, 19, 20 ],
+            "S": [ 4 ],
+            "Y": [ 29, 30, 31, 32, 33, 34, 35, 36 ]
+          }
+        },
+        "$procmux$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/foss/designs/counter8/rtl/counter.v:24.13-24.16|/foss/designs/counter8/rtl/counter.v:24.9-27.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 29, 30, 31, 32, 33, 34, 35, 36 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 3 ],
+            "Y": [ 21, 22, 23, 24, 25, 26, 27, 28 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\count[7:0]": {
+          "hide_name": 1,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:23.5-29.8"
+          }
+        },
+        "$add$/foss/designs/counter8/rtl/counter.v:27$2_Y": {
+          "hide_name": 1,
+          "bits": [ 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:27.22-27.34"
+          }
+        },
+        "$procmux$3_Y": {
+          "hide_name": 1,
+          "bits": [ 29, 30, 31, 32, 33, 34, 35, 36 ],
+          "attributes": {
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:17.23-17.26"
+          }
+        },
+        "count": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:20.23-20.28"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:19.23-19.25"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/foss/designs/counter8/rtl/counter.v:18.23-18.26"
+          }
+        }
+      }
+    }
+  }
+}

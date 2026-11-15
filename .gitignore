@@ -1,0 +1,7 @@
+# Editor lock files and swap files
+.~lock.*
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
